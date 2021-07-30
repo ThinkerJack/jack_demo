@@ -1,0 +1,15 @@
+server:
+  port: 8080
+
+spring:
+    #数据源
+  datasource:
+    url: jdbc:mysql://localhost:3306/time_manager_app?characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+mybatis:
+  typeAliasesPackage: com.note.app.note_app.dao.entity
+
+  mapperLocations: classpath:mapper/*.xml
+  #configLocation: classpath:/mybatis-config.xml

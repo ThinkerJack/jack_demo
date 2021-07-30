@@ -1,0 +1,103 @@
+<div nz-row>按钮</div>
+<button nz-button nzType="primary">Primary Button</button>
+<button nz-button nzType="default">Default Button</button>
+<button nz-button nzType="dashed">Dashed Button</button>
+<button nz-button nzType="text">Text Button</button>
+<a nz-button nzType="link">Link Button</a>
+<div nz-row>布局</div>
+<div nz-row>
+    <div nz-col nzSpan="8" style="background-color: aliceblue;">col-8</div>
+    <div nz-col nzSpan="8" nzOffset="8" style="background-color: aqua;">col-8</div>
+</div>
+<div nz-row>
+    <div nz-col nzSpan="6" nzOffset="6">col-6 col-offset-6</div>
+    <div nz-col nzSpan="6" nzOffset="6">col-6 col-offset-6</div>
+</div>
+<div nz-row>
+    <div nz-col nzSpan="12" nzOffset="6">col-12 col-offset-6</div>
+</div>
+<div nz-row>下拉列表</div>
+<a nz-dropdown [nzDropdownMenu]="menu">
+    Hover me
+    <i nz-icon nzType="down"></i>
+</a>
+<nz-dropdown-menu #menu="nzDropdownMenu">
+    <ul nz-menu nzSelectable>
+        <li nz-menu-item>1st menu item</li>
+        <li nz-menu-item>2nd menu item</li>
+        <li nz-menu-item>3rd menu item</li>
+        <li nz-menu-item nzDanger>4th danger item</li>
+    </ul>
+</nz-dropdown-menu>
+<div nz-row>日期选择</div>
+
+<nz-date-picker [(ngModel)]="date" (ngModelChange)="onChange($event)"></nz-date-picker>
+<br />
+<nz-date-picker nzMode="week" [(ngModel)]="date" (ngModelChange)="getWeek($event)"></nz-date-picker>
+<br />
+<nz-date-picker nzMode="month" [(ngModel)]="date" (ngModelChange)="onChange($event)"></nz-date-picker>
+<br />
+<nz-date-picker nzMode="year" [(ngModel)]="date" (ngModelChange)="onChange($event)"></nz-date-picker>
+<br />
+<button nz-button nzType="default" (click)="changeLanguage()">
+    Switch language for all pickers
+</button>
+<div nz-row>联动选择器</div>
+<div>
+    <nz-select [(ngModel)]="selectedProvince" (ngModelChange)="provinceChange($event)">
+        <nz-option *ngFor="let p of provinceData" [nzValue]="p" [nzLabel]="p"></nz-option>
+    </nz-select>
+    <nz-select [(ngModel)]="selectedCity">
+        <nz-option *ngFor="let c of cityData[selectedProvince]" [nzValue]="c" [nzLabel]="c"></nz-option>
+    </nz-select>
+</div>
+<div nz-row>图片选择</div>
+<div class="clearfix">
+    <nz-upload nzAction="https://www.mocky.io/v2/5cc8019d300000980a055e76" nzListType="picture-card"
+        [(nzFileList)]="fileList" [nzShowButton]="fileList.length < 8" [nzPreview]="handlePreview">
+        <div>
+            <i nz-icon nzType="plus"></i>
+            <div style="margin-top: 8px">Upload</div>
+        </div>
+    </nz-upload>
+    <nz-modal [nzVisible]="previewVisible" [nzContent]="modalContent" [nzFooter]="null"
+        (nzOnCancel)="previewVisible = false">
+        <ng-template #modalContent>
+            <img [src]="previewImage" [ngStyle]="{ width: '100%' }" />
+        </ng-template>
+    </nz-modal>
+</div>
+
+<div nz-row>骨架屏</div>
+
+<nz-skeleton [nzActive]="true"></nz-skeleton>
+<div nz-row>加载框</div>
+<nz-spin nzSimple></nz-spin>
+
+<button nz-button nzType="primary">Primary Button</button>
+<button nz-button nzType="default">Default Button</button>
+<button nz-button nzType="dashed">Dashed Button</button>
+<button nz-button nzType="text">Text Button</button>
+<a nz-button nzType="link">Link Button</a>
+<nz-table #basicTable [nzData]="listOfData">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Address</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of basicTable.data">
+        <td>{{ data.name }}</td>
+        <td>{{ data.age }}</td>
+        <td>{{ data.address }}</td>
+        <td>
+          <a>Action 一 {{ data.name }}</a>
+          <nz-divider nzType="vertical"></nz-divider>
+          <a>Delete</a>
+        </td>
+      </tr>
+    </tbody>
+  </nz-table>
