@@ -1,330 +1,45 @@
-# 1 安装node
+# angular_demo
 
-https://nodejs.org/en/
+## 1.项目简介
 
-```
-npm -v
-```
+使用Angular框架和TypeScript编写的前端项目。主要包含一些web开发中常用组件的展示。
 
-7.2.0
+## 2.环境简介
 
-# 2 安装 Angular CLI
+语言：TypeScript
 
-```
-npm install -g @angular/cli
-```
+框架版本：Angular CLI:11.2.6
 
-angular版本
+包管理工具：Node:14.16.0
 
-![](https://img-blog.csdnimg.cn/20210402103233253.png)
-
-创建项目
-
-运行 CLI 命令 `ng new` 并提供 `my-app` 名称作为参数，如下所示：
-
-```
-ng new my-app
-```
-
-启动项目
-
-```
-ng serve
-```
-
-浏览器访问 localhost:4200
-
-# 3 ng-bootstrap
-
-## 3.1 安装
-
-简介：仅使用Bootstrap 4 CSS和为Angular生态系统设计的API完全构建的Angular窗口小部件。
-
-cd到工程目录下
-
-```bash
-ng add @ng-bootstrap/ng-bootstrap
-```
-
-[手动安装文档](https://ng-bootstrap.github.io/#/getting-started)
-
-## 3.2 选择组件
-
-[组件列表地址](https://ng-bootstrap.github.io/#/components/accordion/examples)
-
-- 表格組件 [Table](https://ng-bootstrap.github.io/#/components/table)
-
-- 分页组件 [Pagination](https://ng-bootstrap.github.io/#/components/pagination)
-- 日期组件 [Datepicker](https://ng-bootstrap.github.io/#/components/datepicker/overview)
-- 弹窗 [Popover](https://ng-bootstrap.github.io/#/components/popover/examples)
-- Tab页 [Nav](https://ng-bootstrap.github.io/#/components/nav/overview)
-- 下拉列表 dropDown
-
-## 3.3 项目页面展示
+## 3.项目截图
 
 ![](https://img-blog.csdnimg.cn/20210402153724368.png)
 
-![](https://img-blog.csdnimg.cn/2021040215375197.png)
-
-# 4 NG-ZORRO
-
-## 4.1 安装
-
-简介：`ng-zorro-antd` 是遵循 Ant Design 设计规范的 Angular UI 组件库，主要用于研发企业级中后台产品。全部代码开源并遵循 MIT 协议，任何企业、组织及个人均可免费使用。
-
-cd到工程目录下
-
-```
-ng add ng-zorro-antd
-```
-
-由于引入了多个组件库，必须手动安装
-
-### 4.1.1 引入样式#
-
-#### 使用全部组件样式#
-
-该配置将包含组件库的全部样式，如果只想使用某些组件请查看 [使用特定组件样式](https://ng.ant.design/docs/getting-started/zh#使用特定组件样式) 配置。
-
-在 `angular.json` 中引入了
-
-```json
-{
-  "styles": [
-    "node_modules/ng-zorro-antd/ng-zorro-antd.min.css"
-  ]
-}
-```
-
-在 `style.css` 中引入预构建样式文件
-
-```css
-@import "~ng-zorro-antd/ng-zorro-antd.min.css";
-```
-
-或在 `style.less` 中引入 less 样式文件
-
-```less
-@import "~ng-zorro-antd/ng-zorro-antd.less";
-```
-
-#### 使用特定组件样式#
-
-> 由于组件之间的样式也存在依赖关系，单独引入多个组件的 CSS 可能导致 CSS 的冗余。
-
-使用特定组件样式时前需要先引入基本样式(所有组件的共用样式)。
-
-在 `style.css` 中引入预构建样式文件
-
-```css
-@import "~ng-zorro-antd/style/index.min.css"; /* 引入基本样式 */
-@import "~ng-zorro-antd/button/style/index.min.css"; /* 引入组件样式 */
-```
-
-或在 `style.less` 中引入 less 样式文件
-
-```less
-@import "~ng-zorro-antd/style/entry.less"; /* 引入基本样式 */
-@import "~ng-zorro-antd/button/style/entry.less"; /* 引入组件样式 */
-```
-
-### 4.1.2 引入组件模块#
-
-最后你需要将想要使用的组件模块引入到你的 `app.module.ts` 文件和[特性模块](https://angular.cn/guide/feature-modules)中。
-
-以下面的 `NzButtonModule` 模块为例，先引入组件模块：
-
-```ts
-import { NgModule } from '@angular/core';
-import { NzButtonModule } from 'ng-zorro-antd/button';
-import { AppComponent } from './app.component';
-
-@NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    NzButtonModule
-  ]
-})
-export class AppModule { }
-```
-
-然后在模板中使用：
-
-```html
-<button nz-button nzType="primary">Primary</button>
-```
-
-全部组件
-
-```typescript
-
-import { NzAffixModule } from 'ng-zorro-antd/affix';
-import { NzAlertModule } from 'ng-zorro-antd/alert';
-import { NzAnchorModule } from 'ng-zorro-antd/anchor';
-import { NzAutocompleteModule } from 'ng-zorro-antd/auto-complete';
-import { NzAvatarModule } from 'ng-zorro-antd/avatar';
-import { NzBackTopModule } from 'ng-zorro-antd/back-top';
-import { NzBadgeModule } from 'ng-zorro-antd/badge';
-import { NzBreadCrumbModule } from 'ng-zorro-antd/breadcrumb';
-import { NzButtonModule } from 'ng-zorro-antd/button';
-import { NzCalendarModule } from 'ng-zorro-antd/calendar';
-import { NzCardModule } from 'ng-zorro-antd/card';
-import { NzCarouselModule } from 'ng-zorro-antd/carousel';
-import { NzCascaderModule } from 'ng-zorro-antd/cascader';
-import { NzCheckboxModule } from 'ng-zorro-antd/checkbox';
-import { NzCollapseModule } from 'ng-zorro-antd/collapse';
-import { NzCommentModule } from 'ng-zorro-antd/comment';
-import { NzNoAnimationModule } from 'ng-zorro-antd/core/no-animation';
-import { NzTransButtonModule } from 'ng-zorro-antd/core/trans-button';
-import { NzWaveModule } from 'ng-zorro-antd/core/wave';
-import { NzDatePickerModule } from 'ng-zorro-antd/date-picker';
-import { NzDescriptionsModule } from 'ng-zorro-antd/descriptions';
-import { NzDividerModule } from 'ng-zorro-antd/divider';
-import { NzDrawerModule } from 'ng-zorro-antd/drawer';
-import { NzDropDownModule } from 'ng-zorro-antd/dropdown';
-import { NzEmptyModule } from 'ng-zorro-antd/empty';
-import { NzFormModule } from 'ng-zorro-antd/form';
-import { NzGridModule } from 'ng-zorro-antd/grid';
-import { NzI18nModule } from 'ng-zorro-antd/i18n';
-import { NzIconModule } from 'ng-zorro-antd/icon';
-import { NzImageModule } from 'ng-zorro-antd/image';
-import { NzInputModule } from 'ng-zorro-antd/input';
-import { NzInputNumberModule } from 'ng-zorro-antd/input-number';
-import { NzLayoutModule } from 'ng-zorro-antd/layout';
-import { NzListModule } from 'ng-zorro-antd/list';
-import { NzMentionModule } from 'ng-zorro-antd/mention';
-import { NzMenuModule } from 'ng-zorro-antd/menu';
-import { NzMessageModule } from 'ng-zorro-antd/message';
-import { NzModalModule } from 'ng-zorro-antd/modal';
-import { NzNotificationModule } from 'ng-zorro-antd/notification';
-import { NzPageHeaderModule } from 'ng-zorro-antd/page-header';
-import { NzPaginationModule } from 'ng-zorro-antd/pagination';
-import { NzPopconfirmModule } from 'ng-zorro-antd/popconfirm';
-import { NzPopoverModule } from 'ng-zorro-antd/popover';
-import { NzProgressModule } from 'ng-zorro-antd/progress';
-import { NzRadioModule } from 'ng-zorro-antd/radio';
-import { NzRateModule } from 'ng-zorro-antd/rate';
-import { NzResultModule } from 'ng-zorro-antd/result';
-import { NzSelectModule } from 'ng-zorro-antd/select';
-import { NzSkeletonModule } from 'ng-zorro-antd/skeleton';
-import { NzSliderModule } from 'ng-zorro-antd/slider';
-import { NzSpinModule } from 'ng-zorro-antd/spin';
-import { NzStatisticModule } from 'ng-zorro-antd/statistic';
-import { NzStepsModule } from 'ng-zorro-antd/steps';
-import { NzSwitchModule } from 'ng-zorro-antd/switch';
-import { NzTableModule } from 'ng-zorro-antd/table';
-import { NzTabsModule } from 'ng-zorro-antd/tabs';
-import { NzTagModule } from 'ng-zorro-antd/tag';
-import { NzTimePickerModule } from 'ng-zorro-antd/time-picker';
-import { NzTimelineModule } from 'ng-zorro-antd/timeline';
-import { NzToolTipModule } from 'ng-zorro-antd/tooltip';
-import { NzTransferModule } from 'ng-zorro-antd/transfer';
-import { NzTreeModule } from 'ng-zorro-antd/tree';
-import { NzTreeViewModule } from 'ng-zorro-antd/tree-view';
-import { NzTreeSelectModule } from 'ng-zorro-antd/tree-select';
-import { NzTypographyModule } from 'ng-zorro-antd/typography';
-import { NzUploadModule } from 'ng-zorro-antd/upload';
-import { NzResizableModule } from 'ng-zorro-antd/resizable';
-import { NzPipesModule } from 'ng-zorro-antd/pipes';
-```
-
-imports
-
-```typescript
- NzButtonModule,
-    NzAffixModule,
-    NzAlertModule,
-    NzAnchorModule,
-    NzAutocompleteModule,
-    NzAvatarModule,
-    NzBackTopModule,
-    NzBadgeModule,
-    NzButtonModule,
-    NzBreadCrumbModule,
-    NzCalendarModule,
-    NzCardModule,
-    NzCarouselModule,
-    NzCascaderModule,
-    NzCheckboxModule,
-    NzCollapseModule,
-    NzCommentModule,
-    NzDatePickerModule,
-    NzDescriptionsModule,
-    NzDividerModule,
-    NzDrawerModule,
-    NzDropDownModule,
-    NzEmptyModule,
-    NzFormModule,
-    NzGridModule,
-    NzI18nModule,
-    NzIconModule,
-    NzImageModule,
-    NzInputModule,
-    NzInputNumberModule,
-    NzLayoutModule,
-    NzListModule,
-    NzMentionModule,
-    NzMenuModule,
-    NzMessageModule,
-    NzModalModule,
-    NzNoAnimationModule,
-    NzNotificationModule,
-    NzPageHeaderModule,
-    NzPaginationModule,
-    NzPopconfirmModule,
-    NzPopoverModule,
-    NzProgressModule,
-    NzRadioModule,
-    NzRateModule,
-    NzResultModule,
-    NzSelectModule,
-    NzSkeletonModule,
-    NzSliderModule,
-    NzSpinModule,
-    NzStatisticModule,
-    NzStepsModule,
-    NzSwitchModule,
-    NzTableModule,
-    NzTabsModule,
-    NzTagModule,
-    NzTimePickerModule,
-    NzTimelineModule,
-    NzToolTipModule,
-    NzTransButtonModule,
-    NzTransferModule,
-    NzTreeModule,
-    NzTreeViewModule,
-    NzTreeSelectModule,
-    NzTypographyModule,
-    NzUploadModule,
-    NzWaveModule,
-    NzResizableModule,
-    NzPipesModule,
-```
-
-官方安装文档
-
-https://ng.ant.design/docs/getting-started/zh
-
-## 4.2 选择组件
-
-[组件地址](https://ng.ant.design/components/overview/zh)
-
-- 按钮 [button](https://ng.ant.design/components/button/zh)
-- 布局 [layout](https://ng-zorro.gitee.io/components/layout/zh)
-- 下拉列表 [dropdown](https://ng-zorro.gitee.io/components/dropdown/zh)
-- 日期选择 [datetimepicker](https://ng-zorro.gitee.io/components/date-picker/zh)
-- 联动选择器 [select](https://ng-zorro.gitee.io/components/select/zh) 
-- 图片上传 [upload](https://ng-zorro.gitee.io/components/upload/zh)
-- 骨架屏 [skeleton](https://ng-zorro.gitee.io/components/skeleton/zh) 
-- 加载 [Spin](https://ng-zorro.gitee.io/components/spin/zh)
-
-## 4.3 项目页面展示
-
 ![](https://img-blog.csdnimg.cn/20210402155635665.png)
 
-## 5 github地址
+## 4.开发流程与代码逻辑简述
 
-https://github.com/jack0-0wu/angular_demo
+- 搭建开发环境
+- 创建工程，安装组件库NG-ZORRO和ng-bootstrap
+- 在项目中引入所需要的具体组件
+- 在html文件中绘制布局，在ts文件中编写逻辑
+
+## 5.技术准备
+
+- TS语法
+- [Angular基础知识](https://angular.cn/)
+- 组件库文档[NG-ZORRO](https://ng.ant.design/components/overview/zh)和[ng-bootstrap](https://ng-bootstrap.github.io/#/components/accordion/examples)
+
+## 6.总结
+
+很简单的开源项目，当时写这个主要是为了熟悉一下angular组件。作为github上自己唯一的前端项目，我感觉很没水平，连最起码流程页面都没有一个，不过自己本身前端水平也不高，也不打算长期在这方面发展，计划之内还有其他的事情，只能接受这种不完美了。
+
+在职业生涯的初期，自己一直在写Angular，从Angular.js到Angular7,8,11，由于对前端没有一点的兴趣，唉，工作之外的时间都去学java写后台了，一直也没有深入了解angular，就是CRUD，但是这种工作和私下学习分开的学习方式对我来说效果很不好，导致JAVA服务器端开发和前端开发都没有深入，其实自己现在也面临着这样的问题，工作两年，java web，angualr，flutter，android，iOS，除却FLutter有一些积累外，其他的技术都是勉强应付工作，环境和个人认知导致的吧，自己这只有广度没有深度的技术栈，从资本主义的角度来看，专精一门的工人生产力更高，也就是所谓的大厂螺丝钉。提高自己的生产力，就是让自己更值钱，接下来的一年也会朝着专精一门的方向发展，除却计算机基础知识的学习外，在flutter和android上提高自己的技术深度。争取在工作三年之际给自己一个满意的答案。
+
+虽然自己一直苦于没有技术深度，但是这种技术广度也让自己对整个产品的开发流程更加了解，其实很多技术知识都是可以复用的，像本篇文章中介绍的框架Angular的响应式编程，在FLutter中也同样适用；还有端开发的统一流程，发送请求，获取数据，更新UI；就是后端和前端的某些知识也是可以通用的，在写后台的过程中学习SQL知识，在端开发的本地存储上一样适用；面向对象还能在脚本开发中发挥作用。还有程序架构mvc，mvp，mvvm之类，很多很多吧。
+
+得益于这两年来的自学，不夸张的说，让自己培养出了较强的学习能力，学习能力其实是很抽象的，首先有学习的热情，同样学习热情的两个人，在学习过程中的速度和效果，就可以理解为学习能力。这两年间自己的大脑里已经有了一张图谱，在面对新知识的时候，会敏锐的发现哪些知识和之前学的知识类似，并将他们关联起来，哪些是需要重点学习的新概念，哪些是不太重要的知识。大脑其实是很懒惰的，碰到理解不了的东西他就会分散你的注意力，让你去做一些不需要动脑的事情，我把这些事情称之为精神垃圾。学习分两种，向之前提过的将知识与原来学习过的东西联系起来不算真正意义上的学习，叫复习。只有哪些你理解不了的概念，大脑不想让你继续学下去的知识，才是有效的学习。面对这样的情况，就是用意志力和大脑对抗，我就是要弄懂，一遍不懂就重复看，看懂为止。意志力又是一个新概念了，我觉得很多伟大的文学作品都增强了我的意志力，让我勇于面对生活，活着就挺难了。后续单独写一篇学习相关的吧，做做总结，反思一下自己。
+
+没有文档的开源项目相当于没有灵魂，自己专门腾出一些时间，给这些项目赋予灵魂，为测试不同的项目配置了很多环境。好处就是自己的开源项目写的没那么多，工作量尚可，自己的记忆也还不错，项目的一些流程和细节都还能想的起来。还没有灵魂的项目不多了，争取这周搞完，以后写项目写完之后一定要写一份文档，这种堆积起来一次补齐的方式太累了。这两年总是在迷茫和换工作中度过，很多自己想做的事情都被准备面试耽误了，这份工作无论如何也要做一年多，把自己想做的东西，想学的知识有条不紊的完成，也算对得起自己。
+
