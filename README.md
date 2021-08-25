@@ -179,10 +179,6 @@ UI框架：UIKit
 
 - [UIKit使用](https://developer.apple.com/documentation/uikit/)
 
-  ```java
-  Gson gson = new Gson();
-  JsonBean data = gson.fromJson(responseData, JsonBean.class);
-  ```
 
 ## 6.总结
 
