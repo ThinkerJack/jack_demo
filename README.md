@@ -138,7 +138,7 @@ fLutter版本：Channel master, 2.3.0-17.0.pre.414
 
 ## 3.项目截图
 
-![](https://img-blog.csdnimg.cn/7bfc8de344d34ddea1e7898a16f11ed5.png)
+<img src="https://img-blog.csdnimg.cn/7bfc8de344d34ddea1e7898a16f11ed5.png" style="zoom: 67%;" />
 
 ## 4.开发流程与代码逻辑简述
 
