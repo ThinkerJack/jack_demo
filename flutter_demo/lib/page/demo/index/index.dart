@@ -1,4 +1,3 @@
-
 import 'package:animations/animations.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -6,19 +5,10 @@ import 'package:flutter_demo/config/routers.dart';
 import 'package:flutter_demo/config/static_resource.dart';
 import 'package:flutter_demo/util/util.dart';
 
-class Index extends StatefulWidget {
-  @override
-  _IndexState createState() => _IndexState();
-}
-
-class _IndexState extends State<Index> {
+class Index extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(
-      //   title: Font(text: "首页", size: 40, color: Colors.white),
-      //   centerTitle: true,
-      // ),
       body: Padding(
         padding: EdgeInsets.all(20.s),
         child: GridView(
@@ -32,7 +22,7 @@ class _IndexState extends State<Index> {
               //转场动画组件
               OpenContainer(
                 openBuilder: (context, closedContainer) {
-                  return Routers.routerMap[StaticResource.demoMap[demoName]];
+                  return Routers.routerMap[StaticResource.demoMap[demoName]]!;
                 },
                 // openColor: theme.cardColor,
                 closedShape: RoundedRectangleBorder(
@@ -63,19 +53,6 @@ class _IndexState extends State<Index> {
                       });
                 },
               ),
-
-            //需要更新
-            // Button(
-            //     text: "跳转ChannelTest",
-            //     onTap: () {
-            //       RouterUtil.push(context, routerName: "planFromTest");
-            //     }),
-
-            // Button(
-            //     text: "日历控件Demo",
-            //     onTap: () {
-            //       RouterUtil.push(context, routerName: "calendarDemo");
-            //     }),
           ],
         ),
       ),

@@ -7,8 +7,8 @@ class RouterUtil {
   static final GlobalKey<NavigatorState> routerGlobalKey =
       GlobalKey<NavigatorState>();
 
-  static push({String routerName, dynamic data, Function pushThen}) {
-    routerGlobalKey.currentState
+  static push({required String routerName, dynamic data, Function? pushThen}) {
+    routerGlobalKey.currentState!
         .pushNamed(routerName, arguments: data)
         .then((value) {
       if (pushThen != null) pushThen(value);
@@ -16,8 +16,8 @@ class RouterUtil {
   }
 
   static pushReplacementNamed(
-      {String routerName, dynamic data, Function pushThen}) {
-    routerGlobalKey.currentState
+      {required String routerName, dynamic data, Function? pushThen}) {
+    routerGlobalKey.currentState!
       ..pushReplacementNamed(routerName, arguments: data).then((value) {
         if (pushThen != null) pushThen(value);
       });
@@ -25,8 +25,8 @@ class RouterUtil {
 
   static pop({dynamic value}) {
     value != null
-        ? routerGlobalKey.currentState.pop(value)
-        : routerGlobalKey.currentState.pop();
+        ? routerGlobalKey.currentState!.pop(value)
+        : routerGlobalKey.currentState!.pop();
   }
 
   //匹配路由
@@ -36,9 +36,9 @@ class RouterUtil {
 
   static Route<dynamic> jumpTo(RouteSettings settings) {
     if (settings.arguments != null)
-      _matchRouter(settings.name).setData(settings.arguments);
+      _matchRouter(settings.name!).setData(settings.arguments);
     return MaterialPageRoute(
-      builder: (context) => _matchRouter(settings.name),
+      builder: (context) => _matchRouter(settings.name!),
       settings: settings,
     );
   }
