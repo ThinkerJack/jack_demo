@@ -13,8 +13,11 @@ class TestViewModel extends ChangeNotifier {
 
   factory TestViewModel() => _instance;
 
-  // TestModel testModel = ;
-  notice() {
+  TestModel testModel = TestModel("123");
+
+  void changeData(){
+    testModel.data = "456";
     notifyListeners();
   }
+
 }

@@ -33,6 +33,7 @@ class SizeAdaptiveUtil {
   }
 
   double size(num designSize) => designSize * _widthPercentage;
+
   double fontSize(num designFontSize) =>
       designFontSize * _widthPercentage * _scaling;
 }

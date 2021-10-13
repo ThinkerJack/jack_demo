@@ -8,32 +8,9 @@ import 'package:flutter/material.dart';
 /// Description:
 class StaticResource {
   //首页demoMap
-  static final Map<String, String> demoMap = {};
+  static final Map<String, String> demoMap = {
+    "MVVMTest":"TestView"
+  };
 
-  //测试用key
-  static final GlobalKey testKey = GlobalKey();
-
-  //
-  static ThemeData customThemeData = ThemeData(
-    primaryColor: Colors.blue,
-    visualDensity: VisualDensity.adaptivePlatformDensity,
-  );
-  static ThemeData customDarkThemeData = ThemeData(
-    primaryColor: Colors.black,
-    visualDensity: VisualDensity.adaptivePlatformDensity,
-  );
-
-  static getSuccess() {
-    return Color(0xFF28a745);
-  }
 }
 
-extension CustomColorScheme on ThemeData {
-  Color get success => StaticResource.getSuccess();
-
-  Color get info => const Color(0xFF17a2b8);
-
-  Color get warning => const Color(0xFFffc107);
-
-  Color get danger => const Color(0xFFdc3545);
-}

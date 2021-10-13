@@ -18,7 +18,7 @@ class Index extends StatelessWidget {
               crossAxisSpacing: 10.s,
               mainAxisSpacing: 10.s),
           children: [
-            for (String demoName in StaticResource.demoMap.keys.toList())
+            for (String demoName in StaticResource.demoMap.keys)
               //转场动画组件
               OpenContainer(
                 openBuilder: (context, closedContainer) {
@@ -48,8 +48,6 @@ class Index extends StatelessWidget {
                       ),
                       onTap: () {
                         openContainer();
-                        // RouterUtil.push(
-                        //     routerName: StaticResource.demoMap[demoName]);
                       });
                 },
               ),
