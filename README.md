@@ -1,3 +1,7 @@
+![](https://img-blog.csdnimg.cn/5cf1ef2c34a84df6a8520f996dc6b138.png)
+
+android/ios/flutter/angular/java web 5种技术编写的7个demo工程，有点用，可以看看，[github地址](https://github.com/ThinkerJack/jack_demo)。
+
 # android_demo
 
 ## 1.项目简介
@@ -151,7 +155,7 @@ fLutter版本：Channel master, 2.3.0-17.0.pre.414
 
 ## 6.总结
 
-这个项目维护是比较多的，首页上展示的只有动画和一些有趣的组件，可以下载体验一下，看看有没有感兴趣的功能。
+这个项目维护是比较多的，首页上展示的只有动画和一些有趣的组件，可以下载体验一下，看看有没有感兴趣的功能。这个项目有单独的地址，目前这个demo工程只是一些测试代码。
 
 # IOS_Demo
 
@@ -187,4 +191,6 @@ UI框架：UIKit
 # 写在末尾
 
 由于更换了电脑，两个java相关的工程需要重新搭建环境补齐文档，暂时不打算更新了，感兴趣的网上随便搜几篇技术文章就能搭。
+
+后续如果自己想写点后台的话，就顺手把这两个readme补齐。
 
