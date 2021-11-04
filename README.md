@@ -1,6 +1,6 @@
-![](https://img-blog.csdnimg.cn/5cf1ef2c34a84df6a8520f996dc6b138.png)
+![](https://img-blog.csdnimg.cn/20211014162816903.png)
 
-android/ios/flutter/angular/java web 5种技术编写的7个demo工程，有点用，可以看看，[github地址](https://github.com/ThinkerJack/jack_demo)。
+android/ios/flutter/angular/java web 5种技术编写的7个demo工程，有点用，可以看看，[github地址](https://github.com/ThinkerJack/jack_demo)，https://github.com/ThinkerJack/jack_demo。
 
 # android_demo
 
@@ -16,7 +16,7 @@ android/ios/flutter/angular/java web 5种技术编写的7个demo工程，有点�
 
 ## 3.项目截图
 
-<img src="https://img-blog.csdnimg.cn/d29d8323a58949a4a952da489d056f23.png?" style="zoom:33%;" />
+![](https://img-blog.csdnimg.cn/d29d8323a58949a4a952da489d056f23.png)
 
 ## 4.开发流程与代码逻辑简述
 
@@ -47,7 +47,7 @@ android/ios/flutter/angular/java web 5种技术编写的7个demo工程，有点�
 
 ## 3.项目截图
 
-<img src="https://img-blog.csdnimg.cn/9b1016b7e4eb4fe58ae7cf5eb96c096f.png" style="zoom: 25%;" />
+![](https://img-blog.csdnimg.cn/9b1016b7e4eb4fe58ae7cf5eb96c096f.png)
 
 ## 4.开发流程与代码逻辑简述
 
@@ -91,9 +91,9 @@ android/ios/flutter/angular/java web 5种技术编写的7个demo工程，有点�
 
 ## 3.项目截图
 
-![](https://img-blog.csdnimg.cn/20210402153724368.png)
+![](https://img-blog.csdnimg.cn/20211014162817292.png)
 
-![](https://img-blog.csdnimg.cn/20210402155635665.png)
+![](https://img-blog.csdnimg.cn/20211014162817587.png)
 
 ## 4.开发流程与代码逻辑简述
 
@@ -116,7 +116,7 @@ android/ios/flutter/angular/java web 5种技术编写的7个demo工程，有点�
 
 虽然自己一直苦于没有技术深度，但是这种技术广度也让自己对整个产品的开发流程更加了解，其实很多技术知识都是可以复用的，像本篇文章中介绍的框架Angular的响应式编程，在FLutter中也同样适用；还有端开发的统一流程，发送请求，获取数据，更新UI；就是后端和前端的某些知识也是可以通用的，在写后台的过程中学习SQL知识，在端开发的本地存储上一样适用；面向对象还能在脚本开发中发挥作用。还有程序架构mvc，mvp，mvvm之类，很多很多吧。
 
-得益于这两年来的自学，不夸张的说，让自己培养出了较强的学习能力，学习能力其实是很抽象的，首先有学习的热情，同样学习热情的两个人，在学习过程中的速度和效果，就可以理解为学习能力。这两年间自己的大脑里已经有了一张图谱，在面对新知识的时候，会敏锐的发现哪些知识和之前学的知识类似，并将他们关联起来，哪些是需要重点学习的新概念，哪些是不太重要的知识。大脑其实是很懒惰的，碰到理解不了的东西他就会分散你的注意力，让你去做一些不需要动脑的事情，我把这些事情称之为精神垃圾。学习分两种，向之前提过的将知识与原来学习过的东西联系起来不算真正意义上的学习，叫复习。只有哪些你理解不了的概念，大脑不想让你继续学下去的知识，才是有效的学习。面对这样的情况，就是用意志力和大脑对抗，我就是要弄懂，一遍不懂就重复看，看懂为止。意志力又是一个新概念了，我觉得很多伟大的文学作品都增强了我的意志力，让我勇于面对生活，活着就挺难了。后续单独写一篇学习相关的吧，做做总结，反思一下自己。
+得益于这两年来的自学，不夸张的说，让自己培养出了较强的学习能力，学习能力其实是很抽象的，首先有学习的热情，同样学习热情的两个人，在学习过程中的速度和效果，就可以理解为学习能力。这两年间自己的大脑里已经有了一张图谱，在面对新知识的时候，会敏锐的发现哪些知识和之前学的知识类似，并将他们关联起来，哪些是需要重点学习的新概念，哪些是不太重要的知识。大脑其实是很懒惰的，碰到理解不了的东西他就会分散你的注意力，让你去做一些不需要动脑的事情，我把这些事情称之为精神垃圾。学习分两种，向之前提过的将知识与原来学习过的东西联系起来不算真正意义上的学习，叫复习。只有哪些你理解不了的概念，大脑不想让你继续学下去的知识，才是有效的学习。面对这样的情况，就是用意志力和大脑对抗，我就是要弄懂，一遍不懂就重复看，看懂为止。意志力又是一个新概念了，我觉得很多伟大的文学作品都增强了我的意志力，让我勇于面对生活，活着就挺难了。
 
 没有文档的开源项目相当于没有灵魂，自己专门腾出一些时间，给这些项目赋予灵魂，为测试不同的项目配置了很多环境。好处就是自己的开源项目写的没那么多，工作量尚可，自己的记忆也还不错，项目的一些流程和细节都还能想的起来。还没有灵魂的项目不多了，争取这周搞完，以后写项目写完之后一定要写一份文档，这种堆积起来一次补齐的方式太累了。这两年总是在迷茫和换工作中度过，很多自己想做的事情都被准备面试耽误了，这份工作无论如何也要做一年多，把自己想做的东西，想学的知识有条不紊的完成，也算对得起自己。
 
@@ -142,7 +142,7 @@ fLutter版本：Channel master, 2.3.0-17.0.pre.414
 
 ## 3.项目截图
 
-<img src="https://img-blog.csdnimg.cn/7bfc8de344d34ddea1e7898a16f11ed5.png" style="zoom: 67%;" />
+![](https://img-blog.csdnimg.cn/7bfc8de344d34ddea1e7898a16f11ed5.png)
 
 ## 4.开发流程与代码逻辑简述
 
@@ -171,7 +171,7 @@ UI框架：UIKit
 
 ## 3.项目截图
 
-<img src="https://img-blog.csdnimg.cn/09512621e00a4173a5e2ae330b64e9b7.png" alt="在这里插入图片描述" style="zoom:67%;" /><img src="https://img-blog.csdnimg.cn/a34dc44d550d4ea18c26a348deaa10f7.png" alt="在这里插入图片描述" style="zoom:67%;" /><img src="https://img-blog.csdnimg.cn/863b4416093e491aa8f5ddefccd237a4.png" alt="在这里插入图片描述" style="zoom:67%;" /><img src="https://img-blog.csdnimg.cn/d076e1e49377453c823a457d790c8a77.png" alt="在这里插入图片描述" style="zoom:67%;" />
+![](https://img-blog.csdnimg.cn/09512621e00a4173a5e2ae330b64e9b7.png)![](https://img-blog.csdnimg.cn/a34dc44d550d4ea18c26a348deaa10f7.png)![](https://img-blog.csdnimg.cn/863b4416093e491aa8f5ddefccd237a4.png)![](https://img-blog.csdnimg.cn/d076e1e49377453c823a457d790c8a77.png)
 
 ## 4.开发流程与代码逻辑简述
 
@@ -194,3 +194,6 @@ UI框架：UIKit
 
 后续如果自己想写点后台的话，就顺手把这两个readme补齐。
 
+![](https://img-blog.csdnimg.cn/c66cc07b674c424ba11ec6825e22a640.png)
+
+![](https://img-blog.csdnimg.cn/46f9ed15f914479ab130d47e9578e721.png)
