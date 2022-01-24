@@ -18,7 +18,7 @@ class _TestMVVMViewState extends State<TestMVVMView> {
 
   TestViewModel testViewModel = TestViewModel();
 
-  late var function;
+  late VoidCallback function;
 
   @override
   void initState() {
@@ -29,13 +29,13 @@ class _TestMVVMViewState extends State<TestMVVMView> {
         setState(() {});
       }
     };
-    testViewModel.addListener( function());
+    testViewModel.addListener( function);
   }
 
   @override
   void dispose() {
     print("消掉了");
-    testViewModel.removeListener(function());
+    testViewModel.removeListener(function);
     super.dispose();
   }
   @override
