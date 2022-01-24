@@ -18,18 +18,24 @@ class _TestMVVMViewState extends State<TestMVVMView> {
 
   TestViewModel testViewModel = TestViewModel();
 
+  late var function;
+
   @override
   void initState() {
     super.initState();
-    testViewModel.init(function: () {
-      if(mounted){
-      setState(() {});}
-    });
+    function = () {
+      print("run1");
+      if (mounted) {
+        setState(() {});
+      }
+    };
+    testViewModel.addListener( function());
   }
 
   @override
   void dispose() {
-    testViewModel.destruction();
+    print("消掉了");
+    testViewModel.removeListener(function());
     super.dispose();
   }
   @override
