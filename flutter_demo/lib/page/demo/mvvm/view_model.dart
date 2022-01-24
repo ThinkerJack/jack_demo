@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter_demo/page/demo/mvvm_demo/model.dart';
+
+import '../mvvm/model.dart';
 
 /// @author wu chao
 /// @project flutter_demo
@@ -13,11 +14,28 @@ class TestViewModel extends ChangeNotifier {
 
   factory TestViewModel() => _instance;
 
+  late Function _listenFunc;
+
   TestModel testModel = TestModel("123");
 
-  void changeData(){
-    testModel.data = "456";
-    notifyListeners();
+  init({required Function function}) {
+    _listenFunc = function;
+    _instance.addListener(() {
+      _listenFunc();
+    });
   }
 
+  destruction() {
+    _instance.removeListener(() {
+      _listenFunc();
+    });
+  }
+
+  void changeData() {
+    testModel.data = "456";
+    notifyListeners();
+    Future.delayed(Duration(seconds: 5), () {
+      notifyListeners();
+    });
+  }
 }

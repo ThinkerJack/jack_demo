@@ -9,7 +9,9 @@ import 'package:flutter/material.dart';
 class StaticResource {
   //首页demoMap
   static final Map<String, String> demoMap = {
-    "MVVMTest":"TestView"
+    "MVVM":"TestMVVMView",
+    "Ticker":"StopWatch",
+    "LifeCycle":"Test",
   };
 
 }
