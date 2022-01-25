@@ -12,6 +12,7 @@ class StaticResource {
     "MVVM":"TestMVVMView",
     "Ticker":"StopWatch",
     "LifeCycle":"Test",
+    "Key":"PositionedTiles",
   };
 
 }

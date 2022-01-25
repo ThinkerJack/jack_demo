@@ -23,24 +23,24 @@ class _TestMVVMViewState extends State<TestMVVMView> {
   @override
   void initState() {
     super.initState();
+    print("initState");
     function = () {
-      print("run1");
+      print("方法执行");
       if (mounted) {
         setState(() {});
       }
     };
     testViewModel.addListener( function);
   }
-
   @override
   void dispose() {
-    print("消掉了");
+    print("dispose");
     testViewModel.removeListener(function);
     super.dispose();
   }
   @override
   Widget build(BuildContext context) {
-    print("走了还build");
+    print("build");
     return Scaffold(
       appBar: AppBar(
         title: Text("TextView"),
